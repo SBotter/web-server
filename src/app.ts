@@ -20,3 +20,5 @@ app.listen(port, async () => {
 
   swaggerDocs(app, port);
 });
+
+export default app;
