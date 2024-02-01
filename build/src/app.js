@@ -44,6 +44,7 @@ var config_1 = __importDefault(require("config"));
 var connect_1 = __importDefault(require("./utils/connect"));
 var logger_1 = __importDefault(require("./utils/logger"));
 var routes_1 = __importDefault(require("./routes"));
+var swagger_1 = __importDefault(require("./utils/swagger"));
 var port = config_1.default.get("port");
 var app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -56,6 +57,7 @@ app.listen(port, function () { return __awaiter(void 0, void 0, void 0, function
             case 1:
                 _a.sent();
                 (0, routes_1.default)(app);
+                (0, swagger_1.default)(app, port);
                 return [2 /*return*/];
         }
     });

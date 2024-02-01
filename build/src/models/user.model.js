@@ -55,7 +55,6 @@ userSchema.pre("save", function (next) {
             switch (_a.label) {
                 case 0:
                     user = this;
-                    console.log(user);
                     if (!user.isModified("password")) {
                         return [2 /*return*/, next()];
                     }
